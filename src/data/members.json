@@ -1,0 +1,27 @@
+
+[
+{"img": "../images/photo1.png",
+"name":"Bill Mahoney",
+"job":"product owner "
+},
+{"img": "../images/photo2.png",
+"name":"Saba Cabrera",
+"job":"art director "
+},
+{"img": "../images/photo3.png",
+"name":"Shae Le",
+"job":"teach lead"
+},
+{"img": "../images/photo4.png",
+"name":"Skylah Lu",
+"job":"ux designer"
+},
+{"img": "../images/photo5.png",
+"name":"Griff Richards",
+"job":"developer"
+},
+{"img": "../images/photo6.png",
+"name":"Stan John",
+"job":"developer "
+}
+]

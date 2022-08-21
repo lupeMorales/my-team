@@ -1,0 +1,29 @@
+.main {
+  width: 100%;
+  &__container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-auto-rows: 470px;
+    justify-content: center;
+    border: solid 2px red;
+  }
+  &__card {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    list-style: none;
+    width: 300px;
+    border: solid 2px blue;
+    & .img {
+      width: 240px;
+      height: 350px;
+      object-fit: cover;
+    }
+    & .job {
+      position: absolute;
+      transform: translate(220px, 25px) rotate(90deg);
+    }
+  }
+}
