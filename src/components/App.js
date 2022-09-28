@@ -1,41 +1,45 @@
 import "../styles/App.scss";
+import { Routes, Route } from "react-router-dom";
+import { matchPath, useLocation } from "react-router-dom";
 import { useState } from "react";
 import dataMembers from "../data/members.json";
+import Header from "./Header";
+import Main from "./Main";
+import Member from "./Member";
 
 function App() {
   const [members, setMembers] = useState(dataMembers);
 
-  const renderMembers = () => {
-    return members.map((member, index) => {
-      return (
-        <li className="main__card" key={index}>
-          <div className="content">
-            <h4 className="job">{member.job}</h4>
-            <img className="img" src={member.img} alt="" />
-            <h3 className="name">{member.name}</h3>
-          </div>
-        </li>
-      );
-    });
-  };
+  //saca informacion (el id) de la ruta
+  const { pathname } = useLocation();
+
+  //vemos si coincide la ruta que quiero encontrar "/teamM....." con el id de la ruta en la que estoy "pathname". Devuelve null o la info en caso de que coincida
+  const dataPath = matchPath("/teamMember/:id", pathname);
+  //guardo el id en memberId (si dataPath es null nada, pero si es distinto de null saca de dataPath param el id)
+
+  const memberId = dataPath !== null ? dataPath.params.id : null;
+  //busco en mi array de members
+  const memberFound = members.find((item) => item.id === memberId);
+  console.log(memberFound);
+
   return (
     <div className="App">
-      <header className="header">
-        <h1 className="header__title">the creative crew</h1>
-        <article>
-          <h2 className="header__subtitle">who we are</h2>
-          <p className="header__text">
-            We are team of creatively diverse. drive. Innovative individuals
-            working in various locations from de world.
-          </p>
-        </article>
-      </header>
-      <main className="main">
-        <section>
-          <ul className="main__container">{renderMembers()}</ul>
-        </section>
-      </main>
-      <footer className="footer"></footer>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Main members={members} />
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/teamMember/:id"
+          element={<Member member={memberFound} />}
+        ></Route>
+      </Routes>
     </div>
   );
 }

@@ -1,27 +1,34 @@
 
 [
-{"img": "../images/photo1.png",
+{"img": "photo1.png",
 "name":"Bill Mahoney",
-"job":"product owner "
+"job":"product owner ",
+"id":1
+
 },
-{"img": "../images/photo2.png",
+{"img": "photo2.png",
 "name":"Saba Cabrera",
-"job":"art director "
+"job":"art director ",
+"id":2
 },
-{"img": "../images/photo3.png",
+{"img": "photo3.png",
 "name":"Shae Le",
-"job":"teach lead"
+"job":"teach lead",
+"id":3
 },
-{"img": "../images/photo4.png",
+{"img": "photo4.png",
 "name":"Skylah Lu",
-"job":"ux designer"
+"job":"ux designer",
+"id":4
 },
-{"img": "../images/photo5.png",
+{"img": "photo5.png",
 "name":"Griff Richards",
-"job":"developer"
+"job":"developer",
+"id":5
 },
-{"img": "../images/photo6.png",
+{"img": "photo6.png",
 "name":"Stan John",
-"job":"developer "
+"job":"developer ",
+"id":6
 }
 ]
