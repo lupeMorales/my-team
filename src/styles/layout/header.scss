@@ -1,29 +1,22 @@
+@import "../core/variables.scss";
+
 .header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 38px;
-  align-items: baseline;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
-  margin: 110px auto 95px;
-  padding: 0 auto;
-}
-@media all and (min-width: 768px) {
-  .header {
-    justify-content: space-evenly;
+  padding: 10% 12px;
+
+  &__title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    font-family: $second-font;
+    letter-spacing: -1px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
 }
-.header__title {
-  font-size: 3.6rem;
-  font-weight: 700;
-  font-family: /* $second-font */ "PT Serif" serif;
-  letter-spacing: -1px;
-}
-.header__title::first-letter {
-  text-transform: capitalize;
-}
+
 .header__subtitle {
   font-size: 1.8rem;
   font-weight: 600;
